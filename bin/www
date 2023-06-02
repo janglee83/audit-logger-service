@@ -85,6 +85,7 @@ function onListening() {
   const bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-    connectDatabase()
   debug('Listening on ' + bind);
+  connectDatabase()
+  console.log(`Server is listening on port ${addr.port}`);
 }
