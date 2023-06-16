@@ -11,7 +11,7 @@ const AttributeChange = mongoose.Schema(
       require: true,
     },
     new_value: {
-      type: mongoose.SchemaType.Mixed,
+      type: mongoose.SchemaTypes.Mixed,
       require: true,
     },
     value_type: {

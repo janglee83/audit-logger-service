@@ -2,7 +2,7 @@ const ACTION_NAME_VALUE = {
   GET: 0,
   POST: 1,
   PUT: 2,
-  UPDATE: 3,
+  DESTROY: 3,
 };
 
 const EVENT_STATUS = {
