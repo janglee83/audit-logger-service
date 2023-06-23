@@ -1,7 +1,5 @@
-const convertResponse = (status = null, data, response) => {
-    if (status)
-        response.status(status).json(data)
-    response.status(200).json(data)
+const convertResponse = async (status, data, response) => {
+    response.status(status).json(data)
 }
 
 module.exports = convertResponse

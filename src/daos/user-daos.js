@@ -1,10 +1,10 @@
 const baseDaos = require('./base-daos')
 const userModel = require('../models/user')
 
-const userDaos = {
+const UserDaos = {
     insertData: async (data) => {
         return baseDaos.insertData(userModel, data)
     }
 }
 
-module.exports = userDaos
+module.exports = UserDaos

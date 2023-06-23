@@ -27,10 +27,11 @@ const Event = mongoose.Schema(
         require: true,
         enum: Object.values(EVENT_STATUS)
     },
-    attribute_change_id: [{
+    attribute_change_id: {
       type: mongoose.Types.ObjectId,
-      ref: 'AttributeChange'
-    }]
+      ref: 'AttributeChange',
+      require: true,
+    }
   },
   {
     timestamps: true,

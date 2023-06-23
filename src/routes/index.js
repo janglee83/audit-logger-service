@@ -1,10 +1,14 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const userRouter = require('./users');
+const eventRouter = require('./event');
+const { asyncMiddleware } = require('../middlewares');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  // res.render('index', { title: 'se' });
-  res.json({asd: 'asd'})
-});
+const initRouter = (router) => {
+  router.use('/user', userRouter);
+  router.use('/event', eventRouter);
+  router.use(asyncMiddleware);
+  return router;
+};
 
-module.exports = router;
+module.exports = initRouter(router);

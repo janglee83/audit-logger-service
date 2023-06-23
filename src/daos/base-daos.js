@@ -1,8 +1,31 @@
-const baseDaos = {
-    insertData: async (model, data) => {
-        const insertResponse = await model.create(data)
-        return insertResponse
-    }
-}
+const CustomApiMessageError = require('../error/CustomApiMessageError');
+const httpCode = require('../utils/http-code');
 
-module.exports = baseDaos
+const baseDaos = {
+  insertData: async (model, data) => {
+    try {
+      const insertResponse = await model.create(data);
+      return insertResponse;
+    } catch (error) {
+      throw new CustomApiMessageError(httpCode.BAD_REQUEST, 'Insert failed');
+    }
+  },
+  findDataByCondition: async (model, condition) => {
+    try {
+      const findDataResponse = await model.find(condition);
+      return findDataResponse;
+    } catch (error) {
+      throw new CustomApiMessageError(httpCode.BAD_REQUEST, 'Find failed');
+    }
+  },
+  findDataById: async (model, _id) => {
+    try {
+      const findResponse = await model.findById(_id);
+      return findResponse;
+    } catch (error) {
+      throw new CustomApiMessageError(httpCode.BAD_REQUEST, 'Find Failed');
+    }
+  },
+};
+
+module.exports = baseDaos;

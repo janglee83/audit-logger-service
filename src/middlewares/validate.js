@@ -12,7 +12,7 @@ const validationMiddleware = (validations) => {
     }
 
     const payload = { errors: errors.array() }
-    convertResponse(httpCode.UNPROCESSABLE_ENTITY, payload, res)
+    await convertResponse(httpCode.UNPROCESSABLE_ENTITY, payload, res)
   };
 };
 
