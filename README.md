@@ -24,6 +24,9 @@ Docs này có chức năng list thông tin các api được triển khai trong 
 | number   | `action_name` | Type of the api which modified table or not. Value is 1, 2, 3, 4 represent to GET, POST, PUT, UPDATE | `action_id: 1` |
 | object   | `data`        | Modified data, which have 3 parameters                                                               | below          |
 
+## Domain
+
+[Audit logger service](https://audit-logger-service-production.up.railway.app/api/v1/event)
 
 ## Example
 
