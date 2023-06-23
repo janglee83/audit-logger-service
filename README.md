@@ -38,7 +38,7 @@ Accept: application/json
 
 {
 	"action_id": 0,
-    "data": {}
+    	"data": {}
 }
 ```
 
@@ -52,11 +52,12 @@ Accept: application/json
 
 {
 	"action_id": 1,
-    "data": {
-        "old_data": "",
-        "new_data": "some data",
-        "type": "String"
-    }
+	"data": {
+		"old_data": "",
+		"new_data": "some data",
+  		"field_name": "A field name",
+		"type": "String"
+	}
 }
 ```
 
@@ -70,11 +71,12 @@ Accept: application/json
 
 {
 	"action_id": 2,
-    "data": {
-        "old_data": "some data 1",
-        "new_data": "some data 2",
-        "type": "String"
-    }
+    	"data": {
+		"old_data": "some data 1",
+		"new_data": "some data 2",
+  		"field_name": "A field name",
+		"type": "String"
+    	}
 }
 ```
 
@@ -88,7 +90,7 @@ Accept: application/json
 
 {
 	"action_id": 3,
-    "data": {}
+    	"data": {}
 }
 ```
 
