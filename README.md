@@ -6,7 +6,7 @@ Docs này có chức năng list thông tin các api được triển khai trong 
 
 | Name         |  Done   |
 | :----------- | :-----: |
-| List Event   |     &check;    |
+| List Event   |     &check;   |
 | Update Event |       &check;  |
 
 ## Parameters
