@@ -6,9 +6,8 @@ Docs này có chức năng list thông tin các api được triển khai trong 
 
 | Name         |  Done   |
 | :----------- | :-----: |
-| List Event   |         |
-| Update Event |         |
-|              | &check; |
+| List Event   |     &check;   |
+| Update Event |       &check;  |
 
 ## Parameters
 
@@ -28,10 +27,16 @@ Docs này có chức năng list thông tin các api được triển khai trong 
 
 ## Example
 
+### List
+
+```http
+GET https://{{domain}}/api/v1/event
+```
+
 ### Index event
 
 ```http
-POST https://{{domain}}?type={{status_type}}&table={{ table_name }}&entity_id={{ entity_id }}
+POST https://{{domain}}/api/v1/event?type={{status_type}}&table={{ table_name }}&entity_id={{ entity_id }}
 X-Auth-Token: {{ACCESS_TOKEN}}
 Content-Type: application/json
 Accept: application/json
@@ -45,7 +50,7 @@ Accept: application/json
 ### Create event
 
 ```http
-POST https://{{domain}}?type={{status_type}}&table={{ table_name }}&entity_id={{ entity_id }}
+POST https://{{domain}}/api/v1/event?type={{status_type}}&table={{ table_name }}&entity_id={{ entity_id }}
 X-Auth-Token: {{ACCESS_TOKEN}}
 Content-Type: application/json
 Accept: application/json
@@ -64,7 +69,7 @@ Accept: application/json
 ### Update event
 
 ```http
-POST https://{{domain}}?type={{status_type}}&table={{ table_name }}&entity_id={{ entity_id }}
+POST https://{{domain}}/api/v1/event?type={{status_type}}&table={{ table_name }}&entity_id={{ entity_id }}
 X-Auth-Token: {{ACCESS_TOKEN}}
 Content-Type: application/json
 Accept: application/json
@@ -83,7 +88,7 @@ Accept: application/json
 ### Destroy event
 
 ```http
-POST https://{{domain}}?type={{status_type}}&table={{ table_name }}&entity_id={{ entity_id }}
+POST https://{{domain}}/api/v1/event?type={{status_type}}&table={{ table_name }}&entity_id={{ entity_id }}
 X-Auth-Token: {{ACCESS_TOKEN}}
 Content-Type: application/json
 Accept: application/json
