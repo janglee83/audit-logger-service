@@ -35,7 +35,6 @@ const eventService = {
     }
   },
   handleStore: async (clientDomain, clientPath, type, table, entity_id, action_id, attribute_change_id) => {
-    console.log("🚀 ~ file: event-service.js:38 ~ handleStore: ~ attribute_change_id:", attribute_change_id)
     let payload = new Event(clientDomain, clientPath, type, table, entity_id, action_id, attribute_change_id);
     const message = payload.generateDescription(payload);
     payload.description = message;

@@ -12,7 +12,7 @@ const EventDaos = {
     return await baseDaos.findDataById(eventModel, _id);
   },
   getAll: async () => {
-    return await eventModel.aggregate([
+    const query = [
       {
         $match: {},
       },
@@ -24,7 +24,8 @@ const EventDaos = {
           as: 'attribute_change_detail',
         },
       },
-    ]);
+    ];
+    return await baseDaos.queryWithAggregation(eventModel, query);
   },
 };
 

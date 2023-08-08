@@ -26,6 +26,14 @@ const baseDaos = {
       throw new CustomApiMessageError(httpCode.BAD_REQUEST, 'Find Failed');
     }
   },
+  queryWithAggregation: async (model, query) => {
+    try {
+      const result = await model.aggregate(query);
+      return result;
+    } catch (error) {
+      throw new CustomApiMessageError(httpCode.BAD_REQUEST, 'Query Failed');
+    }
+  }
 };
 
 module.exports = baseDaos;
